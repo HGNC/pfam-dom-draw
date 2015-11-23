@@ -1,0 +1,31 @@
+{
+  "name": "pfam-dom-draw",
+  "main": "pfam-dom-draw.js",
+  "description": "Takes a HGNC approved symbol and a UniProt accession from the data-gene and data-uniprot attributes within a div tag and creates a diagram representing the UniProt protein with pfam domains mapped on to the protein",
+  "moduleType": [],
+  "keywords": [
+    "UniProt",
+    "pfam",
+    "HGNC",
+    "domains",
+    "protein"
+  ],
+  "authors": [
+    "KrisGray"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "raphael": "~2.1.4",
+    "jquery.raphael.spinner": "git://github.com/hunterae/jquery.raphael.spinner.git"
+  }
+}

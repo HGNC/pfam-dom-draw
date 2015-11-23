@@ -46,6 +46,8 @@ Finally call the `pfam_doms()` function beneth the script dependencies:
 ```
 The function has one settings that you can pass (spinnerColor) as shown above. The spinnerColor is the colour you want the loading spinner to be (default: #000).
 
+The resulting graphic will show a stylised diagram of a protein with the pfam domains. Hovering over a domain will create a tooltip which offers more information about the domain. Clicking on the domain will take you to pfam.xfam.org for that particular domain. You can also click on the UniProt text above the protein which will navigate you to the UniProt page for the protein. If a gene symbol was added also the gene symbol will appear before the UniProt accession and will navigate you to the HGNC symbol report for the gene if clicked.
+
 ##Acknowledgements
 Many thanks to the Pfam developers for providing a very useful REST webservice which this javascript code uses.
 Information about the Pfam REST API can be found at http://pfam.xfam.org/help#tabview=tab10.

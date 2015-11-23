@@ -26,6 +26,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "raphael": "~2.1.4",
-    "jquery.raphael.spinner": "git://github.com/hunterae/jquery.raphael.spinner.git"
+    "jquery.raphael.spinner": "git://github.com/hunterae/jquery.raphael.spinner.git",
+    "qTip": "1.0.0"
   }
 }

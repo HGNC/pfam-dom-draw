@@ -7,28 +7,22 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">    
-    <title>Index</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <style>
-      .article {
-        margin-bottom: 10px
-      }
-    </style>
+    <title>pfam-dom-draw demo</title>
   </head>
   <body>
-    <h1>Below are references from Europe PubMed Central</h1>
-    <div class="pubmed" data-pubmed-ids="2284096,1565476"></div>
-    <h1>Here are more Europe PMC references</h1>
-    <div class="pubmed" data-pubmed-ids="15057823,8091231,7581463" ></div-->
+    <h1>Protein diagrams with pfam domains</h1>
+    <div class="pfamDomDrawContainer" data-gene="BRAF" data-uniprot="P15056">
+    </div>
+    <div class="pfamDomDrawContainer" data-uniprot="P60709">
+    </div>
     <script type="text/javascript" src="js/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/bower_components/raphael/raphael-min.js"></script>
     <script type="text/javascript" src="js/bower_components/jquery.raphael.spinner/jquery.raphael.spinner.js"></script>
-    <script type="text/javascript" src="js/bower_components/europe-pmcentralizer/europe-pmcentralizer.js"></script>
+    <script type="text/javascript" src="js/bower_components/qTip/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="js/bower_components/pfam-dom-draw/pfam-dom-draw.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         getPMCReferences({
-          iconSize: '20px',
           spinnerColor: '#999'
         });
       });

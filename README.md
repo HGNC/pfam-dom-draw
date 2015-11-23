@@ -15,7 +15,7 @@ Javascript dependencies:
 - [jQuery ~2.1.4](https://github.com/jquery/jquery)
 - [Raphael ~2.1.4](https://github.com/DmitryBaranovskiy/raphael)
 - [jquery.raphael.spinner](https://github.com/hunterae/jquery.raphael.spinner)
-- [qTip](https://github.com/taballa/qTip)
+- [qTip 1.0.0](https://github.com/taballa/qTip)
 
 Web service:
 - [Pfam](http://pfam.xfam.org/help#tabview=tab10)

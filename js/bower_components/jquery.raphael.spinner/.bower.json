@@ -1,0 +1,13 @@
+{
+  "name": "jquery.raphael.spinner",
+  "homepage": "https://github.com/hunterae/jquery.raphael.spinner",
+  "_release": "942bffcf1b",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "942bffcf1b7659a9badcc9420c0d43787fc2f2d5"
+  },
+  "_source": "git://github.com/hunterae/jquery.raphael.spinner.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/hunterae/jquery.raphael.spinner.git"
+}

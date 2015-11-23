@@ -1,0 +1,19 @@
+{
+  "name": "qTip",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/taballa/qTip",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "c277955ba6fea1ecd7fc217aefd181ca608f6e0b"
+  },
+  "_source": "git://github.com/taballa/qTip.git",
+  "_target": "1.0.0",
+  "_originalSource": "qTip"
+}

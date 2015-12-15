@@ -24,7 +24,7 @@ Web service:
 ## Usage
 Simply add a `<div class='pfamDomDrawContainer'>` anywhere in your `<body>` and add the attributes `data-uniprot=""` and `data-gene=""`(optional) to the div tag with the UniProt accession within data-uniprot and a HGNC approved gene symbol within the data-gene. Multiple pfamDomDrawContainer divs can be added to the page:
 ```html
-<div class="pfamDomDrawContainer" data-uniprot="P15056" data-gene="BRAF"></div>
+<div class="pfamDomDrawContainer" data-uniprot="Q9H0C5" data-gene="BTBD1"></div>
 ```
 Then at the bottom of the `<body>` add your javascript dependencies:
 ```html

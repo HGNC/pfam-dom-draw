@@ -48,7 +48,7 @@ The function has one settings that you can pass (spinnerColor) as shown above. T
 
 The resulting graphic will show a stylised diagram of a protein with the pfam domains. Hovering over a domain will create a tooltip which offers more information about the domain. Clicking on the domain will take you to pfam.xfam.org for that particular domain. You can also click on the UniProt text above the protein which will navigate you to the UniProt page for the protein. If a gene symbol was added also the gene symbol will appear before the UniProt accession and will navigate you to the HGNC symbol report for the gene if clicked.
 
-![successful result](https://cloud.githubusercontent.com/assets/9589542/11343942/73dacb52-9206-11e5-8337-1865d6149d92.png)
+![successful result](https://cloud.githubusercontent.com/assets/9589542/11808629/78fd8876-a319-11e5-8e11-d9945f3409db.png)
 
 ##Acknowledgements
 Many thanks to the Pfam developers for providing a very useful REST webservice which this javascript code uses.

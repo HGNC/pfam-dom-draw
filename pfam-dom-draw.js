@@ -129,7 +129,7 @@ function create_dom(paper, region, id, scale){
        }
     });
     $('#'+id+'text').click(function(){
-      document.location.href='http://pfam.sanger.ac.uk'+region.href;
+      document.location.href='http://pfam.xfam.org'+region.href;
     });
   }
   dom.node.setAttribute('id',id);
@@ -156,7 +156,7 @@ function create_dom(paper, region, id, scale){
      }
   });
   $('#'+id).click(function(){
-    document.location.href='http://pfam.sanger.ac.uk'+region.href;
+    document.location.href='http://pfam.xfam.org'+region.href;
   });
   return dom;
 }

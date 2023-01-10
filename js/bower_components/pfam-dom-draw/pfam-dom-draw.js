@@ -48,7 +48,7 @@ function create_paper(id, length, scale, up, gene){
     
     geneText.node.setAttribute("class",gene+"-text");
     $('.'+gene+"-text").click(function(){
-      document.location.href='http://www.genenames.org/cgi-bin/gene_symbol_report?match='+gene;
+      document.location.href='https://www.genenames.org/data/gene-symbol-report/#!/symbol/'+gene;
     });
 
     var upSize = (up.length + 5) * 3;
@@ -129,7 +129,7 @@ function create_dom(paper, region, id, scale){
        }
     });
     $('#'+id+'text').click(function(){
-      document.location.href='http://pfam.xfam.org'+region.href;
+      document.location.href='https://www.ebi.ac.uk/interpro/entry/pfam/'+region.href;
     });
   }
   dom.node.setAttribute('id',id);
@@ -156,7 +156,7 @@ function create_dom(paper, region, id, scale){
      }
   });
   $('#'+id).click(function(){
-    document.location.href='http://pfam.xfam.org'+region.href;
+    document.location.href='https://www.ebi.ac.uk/interpro/entry/pfam/'+region.href;
   });
   return dom;
 }
@@ -168,15 +168,13 @@ function draw_protein(settings, container, i, up, gene){
   $('<div>').attr({id: drawID}).css({overflow: 'auto'}).appendTo($(container));
   $('<div>').attr({id: 'spinner'+i}).css({margin: '0 auto', width: '10%'}).appendTo($('#'+drawID));
   $("#spinner"+i).spinner({dashes: 120, innerRadius: 10, outerRadius: 15, color: settings.spinnerColor});
-  // 'http://pfam.xfam.org/protein/' + up + '/graphic'
-  var jqxhr = $.getJSON('http://www.genenames.org/cgi-bin/ajax/pfam_dom_ajax?up='+up, function(data) {
+  var jqxhr = $.getJSON('https://www.genenames.org/cgi-bin/protein/pfam-domains?up='+up, function(data) {
     var tot_len;
     $.each(data, function(index, prot) {
       var length = parseInt(prot.length);
       var scale = 1;
       if(length > 896){
         if(length/896 >= 1.5) scale = 2;
-        //length = parseInt(length/scale);
       }
 
       var paper = create_paper(drawID, length, scale, up, gene);

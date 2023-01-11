@@ -21,7 +21,7 @@ function getRGBComponents(color) {
     };
 }
 
-import Raphael from '../raphael/raphael.min.js'
+import * as Raphael from '../raphael/raphael.min.js'
 import '../malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js';
 import '../jquery.raphael.spinner/jquery.raphael.spinner.js';
 import '../qTip/jquery.qtip.min.js';

@@ -1,6 +1,5 @@
 import * as $ from '../jquery/dist/jquery.min.js';
 
-$.browser = {};
 (function () {
   $.browser.msie = false;
   $.browser.version = 0;

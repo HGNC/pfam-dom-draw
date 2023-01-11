@@ -16,10 +16,10 @@
     <div class="pfamDomDrawContainer" data-uniprot="Q9Y5I3">
     </div>
     <script type="text/javascript" src="js/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="module" src="js/bower_components/pfam-dom-draw/pfam-dom-draw.js"></script>
-    <script type="text/javascript">
+    <script type="module" src="js/bower_components/pfam-dom-draw/pfam-dom-draw.js">
       $(document).ready(function(){
-        pfam_doms({
+        let PDD = new PfamDomDraw();
+        PDD.pfam_doms({
           spinnerColor: '#999'
         });
       });

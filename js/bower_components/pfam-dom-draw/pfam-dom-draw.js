@@ -262,7 +262,9 @@ export default class PfamDomDraw {
   }
 
   pfam_doms(){
+    console.log('A');
     if (this.bVersion > 7) {
+      console.log('B');
       $('.pfamDomDrawContainer').each((index, container) => {
         this._draw_protein(index, container);
       });

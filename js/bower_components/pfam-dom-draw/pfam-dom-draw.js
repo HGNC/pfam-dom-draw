@@ -1,14 +1,5 @@
 import * as $ from '../jquery/dist/jquery.min.js';
 
-(function () {
-  $.browser.msie = false;
-  $.browser.version = 0;
-  if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
-    $.browser.msie = true;
-    $.browser.version = RegExp.$1;
-  }
-})();
-
 function getRGBComponents(color) {
     var r = color.substring(1, 3);
     var g = color.substring(3, 5);

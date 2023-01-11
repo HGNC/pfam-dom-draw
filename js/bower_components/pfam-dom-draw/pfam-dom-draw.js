@@ -1,4 +1,4 @@
-import jQuery from '../jquery/dist/jquery.min.js';
+import * as jQuery from '../jquery/dist/jquery.min.js';
 
 jQuery.browser = {};
 (function () {

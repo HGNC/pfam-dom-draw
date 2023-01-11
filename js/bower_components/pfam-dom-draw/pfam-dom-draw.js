@@ -1,12 +1,12 @@
-import {jQuery} from '../jquery/dist/jquery.min.js';
+import $ from '../jquery/dist/jquery.min.js';
 
-jQuery.browser = {};
+$.browser = {};
 (function () {
-  jQuery.browser.msie = false;
-  jQuery.browser.version = 0;
+  $.browser.msie = false;
+  $.browser.version = 0;
   if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
-    jQuery.browser.msie = true;
-    jQuery.browser.version = RegExp.$1;
+    $.browser.msie = true;
+    $.browser.version = RegExp.$1;
   }
 })();
 
@@ -84,7 +84,7 @@ export default class PfamDomDraw {
         'cursor': 'pointer'
       });
       text.node.id = `${id}text`;
-      jQuery(`#${id}text`).qtip({
+      $(`#${id}text`).qtip({
         content: `<strong>${metadata.name}</strong>: [Pfam:${metadata.accession}]`,
         style: {
           width: 200,
@@ -106,12 +106,12 @@ export default class PfamDomDraw {
               }
         }
       });
-      jQuery(`#${id}text`).click(() => {
+      $(`#${id}text`).click(() => {
         document.location.href=`https://www.ebi.ac.uk/interpro/entry/pfam/${metadata.accession}/`;
       });
     }
     dom.node.setAttribute('id', id);
-    jQuery(`#${id}`).qtip({
+    $(`#${id}`).qtip({
       content: `<strong>${metadata.name}</strong>: [Pfam:${metadata.accession}]`,
       style: {
         width: 200,
@@ -133,7 +133,7 @@ export default class PfamDomDraw {
           }
       }
     });
-    jQuery(`#${id}`).click(function(){
+    $(`#${id}`).click(function(){
       document.location.href=`https://www.ebi.ac.uk/interpro/entry/pfam/${metadata.accession}/`;
     });
     return dom;
@@ -161,7 +161,7 @@ export default class PfamDomDraw {
       });
       
       geneText.node.setAttribute("class",`${this.gene}-text`);
-      jQuery(`.${this.gene}-text`).click(() => {
+      $(`.${this.gene}-text`).click(() => {
         this._document.location.href= `https://www.genenames.org/data/gene-symbol-report/#!/symbol/${this.gene}`;
       });
 
@@ -172,7 +172,7 @@ export default class PfamDomDraw {
         'cursor': 'pointer'
       });
       upText.node.id = `${this.uniprot}-text`;
-      jQuery(`#${this.uniprot}-text`).click(() => {
+      $(`#${this.uniprot}-text`).click(() => {
         this._document.location.href=`http://www.uniprot.org/uniprot/${this.uniprot}`;
       });
     } else {
@@ -183,7 +183,7 @@ export default class PfamDomDraw {
         'cursor': 'pointer'
       });
       upText.node.id = `${this.uniprot}-text`;
-      jQuery(`#${this.uniprot}-text`).click(() => {
+      $(`#${this.uniprot}-text`).click(() => {
         this._document.location.href=`http://www.uniprot.org/uniprot/${this.uniprot}`;
       });
     }
@@ -198,10 +198,10 @@ export default class PfamDomDraw {
   _draw_protein(index, container){
     //settings, container, i, up, gene
     const drawID = `draw${index}`;
-    jQuery('<div>').attr({id: drawID}).css({overflow: 'auto', 'max-width': '1108px'}).appendTo(jQuery(container));
-    jQuery('<div>').attr({id: `spinner${index}`}).css({margin: '0 auto', width: '10%'}).appendTo(jQuery(`#${drawID}`));
-    jQuery(`#spinner${index}`).spinner({dashes: 120, innerRadius: 10, outerRadius: 15, color: this.settings.spinnerColor});
-    const jqxhr = jQuery.getJSON(`/cgi-bin/protein/pfam-domains?up=${this.uniprot}`, (data) => {
+    $('<div>').attr({id: drawID}).css({overflow: 'auto', 'max-width': '1108px'}).appendTo($(container));
+    $('<div>').attr({id: `spinner${index}`}).css({margin: '0 auto', width: '10%'}).appendTo($(`#${drawID}`));
+    $(`#spinner${index}`).spinner({dashes: 120, innerRadius: 10, outerRadius: 15, color: this.settings.spinnerColor});
+    const jqxhr = $.getJSON(`/cgi-bin/protein/pfam-domains?up=${this.uniprot}`, (data) => {
       let tot_len;
       let paper;
       const color = [
@@ -226,8 +226,8 @@ export default class PfamDomDraw {
         '#707B7C',
         '#273746'
       ];
-      jQuery.each(data.results, (index, result) => {
-        jQuery.each(result.proteins, (i, prot) => {
+      $.each(data.results, (index, result) => {
+        $.each(result.proteins, (i, prot) => {
           let length = parseInt(prot.protein_length);
           let scale = 1;
           if(length > 896){
@@ -236,56 +236,56 @@ export default class PfamDomDraw {
           if(index === 0) {
             paper = this._create_paper(drawID, length, scale);
           }
-          jQuery.each(prot.entry_protein_locations, (j, dom_loc) => {
-            jQuery.each(dom_loc.fragments, (k, frag) => {
+          $.each(prot.entry_protein_locations, (j, dom_loc) => {
+            $.each(dom_loc.fragments, (k, frag) => {
               this._create_dom(paper, frag, `dom${index}-${j}`, scale, result.metadata, color[index]);
             });
           });
           length = parseInt(length/scale);
           tot_len = length+20;
-          jQuery(`div#${drawID} svg`).attr('width', tot_len);
-          jQuery(`div#${drawID} svg`).attr('height', 48);
+          $(`div#${drawID} svg`).attr('width', tot_len);
+          $(`div#${drawID} svg`).attr('height', 48);
           const marg = (tot_len /2) * -1;
-          jQuery(`div#${drawID} svg`).css({left: '50%', 'margin-left': marg});
-          jQuery(`#spinner${index}`).remove();
+          $(`div#${drawID} svg`).css({left: '50%', 'margin-left': marg});
+          $(`#spinner${index}`).remove();
         });
       });
 
-      jQuery(`#${drawID}`).mCustomScrollbar({
+      $(`#${drawID}`).mCustomScrollbar({
         axis:'x',
         theme:'3d-thick-dark',
         scrollInertia: 0
       });
 
-      jQuery('.mCSB_container').css({width: `${tot_len}px`})
+      $('.mCSB_container').css({width: `${tot_len}px`})
 
     }).fail(( jqxhr, textStatus, error ) => {
       const err = `${textStatus}, ${error}`;
       console.warn( `Pfam request Failed: ${err}` );
-      jQuery(`#spinner${index}`).remove();
-      jQuery(`#${drawID}`).append('<p style="text-align:center; color: red; font-family:monospace">Error fetching Pfam data</p>');
+      $(`#spinner${index}`).remove();
+      $(`#${drawID}`).append('<p style="text-align:center; color: red; font-family:monospace">Error fetching Pfam data</p>');
     });
 
-    jQuery(`#${drawID}`).css({
+    $(`#${drawID}`).css({
       height: '70px'
     });
   }
 
   pfam_doms(){
     if (this.bVersion > 7) {
-      jQuery('.pfamDomDrawContainer').each((index, container) => {
+      $('.pfamDomDrawContainer').each((index, container) => {
         this._draw_protein(index, container);
       });
     }
   }
 }
-// jQuery.browser = {};
+// $.browser = {};
 // (function () {
-//   jQuery.browser.msie = false;
-//   jQuery.browser.version = 0;
+//   $.browser.msie = false;
+//   $.browser.version = 0;
 //   if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
-//     jQuery.browser.msie = true;
-//     jQuery.browser.version = RegExp.$1;
+//     $.browser.msie = true;
+//     $.browser.version = RegExp.$1;
 //   }
 // })();
 

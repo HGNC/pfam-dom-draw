@@ -85,7 +85,7 @@ export default class PfamDomDraw {
     if(length > text_len + 2){
       const textstart = parseInt((length/2) + start);
       const textcol = this._idealTextColor(domColor);
-      const text = paper.text(textstart, 20, metadata.name).attr({
+      const text = paper.text(textstart, 35, metadata.name).attr({
         'fill': textcol,
         'font-size': 10,
         'cursor': 'pointer'

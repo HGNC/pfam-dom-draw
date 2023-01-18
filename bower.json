@@ -1,6 +1,6 @@
 {
   "name": "pfam-dom-draw",
-  "main": ["pfam-dom-draw.js", "css/pfam-dom-draw.css"],
+  "main": ["pfam-dom-draw.js"],
   "description": "Creates a diagram representing the UniProt protein with pfam domains mapped on to the protein",
   "moduleType": [],
   "keywords": [

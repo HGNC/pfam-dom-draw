@@ -251,7 +251,7 @@ export default class PfamDomDraw {
               } else {
                 $(`div#${drawID} svg`).addClass('scroll-protein');
                 if($(`div#${drawID}`).parent().find('.scroll-notice').length === 0){
-                  $(`div#${drawID}`).after('<div class="scroll-notice"><img src="img/arrow-left.svg"> scroll <img src="img/arrow-right.svg"></div>');
+                  $(`div#${drawID}`).after('<div class="scroll-notice"><img src="bower_components/pfam-dom-draw/img/arrow-left.svg"> scroll <img src="bower_components/pfam-dom-draw/img/arrow-right.svg"></div>');
                 }
               }
               $(window).on('resize', self._waitForFinalEvent(() => {
@@ -262,7 +262,7 @@ export default class PfamDomDraw {
                 } else {
                   $(`div#${drawID} svg`).addClass('scroll-protein');
                   if($(`div#${drawID} + .scroll-notice`).length === 0){
-                    $(`div#${drawID}`).after('<div class="scroll-notice"><img src="img/arrow-left.svg"> scroll <img src="img/arrow-right.svg"></div>');
+                    $(`div#${drawID}`).after('<div class="scroll-notice"><img src="bower_components/pfam-dom-draw/img/arrow-left.svg"> scroll <img src="bower_components/pfam-dom-draw/img/arrow-right.svg"></div>');
                   }
                 }
               }, 500, "some unique string"));

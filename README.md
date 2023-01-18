@@ -1,4 +1,6 @@
-# pfam-dom-draw
+pfam-dom-draw is being revamped
+
+<!-- # pfam-dom-draw
 
 ## Introduction
 Takes a HGNC approved symbol and a UniProt accession from the data-gene and data-uniprot attributes within a div tag and creates a diagram representing the UniProt protein with pfam domains mapped on to the protein.
@@ -52,4 +54,4 @@ The resulting graphic will show a stylised diagram of a protein with the pfam do
 
 ##Acknowledgements
 Many thanks to the Pfam developers for providing a very useful REST webservice which this javascript code uses.
-Information about the Pfam REST API can be found at http://pfam.xfam.org/help#tabview=tab10.
+Information about the Pfam REST API can be found at http://pfam.xfam.org/help#tabview=tab10. -->

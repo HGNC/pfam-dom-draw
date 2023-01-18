@@ -4,6 +4,7 @@ body {
 
 .pfamDomDrawContainer {
   position: relative;
+  font-family: sans-serif;
 }
 
 .pfamDomDrawContainer > .scroll-notice {
@@ -31,6 +32,7 @@ body {
 	background-color: #F1F5F8;
 	border-color: #003366;
 	color: #003366;
+  font-family: sans-serif;
 }
 
 .my-qtip .qtip-titlebar{

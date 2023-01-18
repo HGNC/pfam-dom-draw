@@ -1,9 +1,10 @@
 export default class PfamDomDraw {
   constructor (settings){
     this.settings = (typeof settings === 'undefined') ? {} : settings;
+    console.log(settings);
     this.settings.spinnerColor = this.settings.spinnerColor ? this.settings.spinnerColor : '#000';
     this.settings.width = this.settings.width ? this.settings.width : 768;
-    this.settings.scaleWidth = this.settings.width + (this.settings.width/2);
+    this.settings._scaleWidth = this.settings.width + (this.settings.width/2);
 
     this.bVersion = 999; // we assume a sane browser
     if (navigator.appVersion.indexOf("MSIE") != -1){
@@ -46,6 +47,7 @@ export default class PfamDomDraw {
       '#708090'  //slategray
     ];
     this.numDistinctDoms = 0;
+    console.log(this.settings);
   }
 
   _getRGBComponents(color) {
@@ -183,9 +185,9 @@ export default class PfamDomDraw {
         this._document.location.href=`http://www.uniprot.org/uniprot/${uniprot}`;
       });
     }
-    paper.text(parseInt(scaled_length) - 25, 60, `${length} amino acids`).attr({
+    paper.text(parseInt(scaled_length) - 42, 60, `${length} amino acids`).attr({
       'fill': '#000',
-      'font-size': 10
+      'font-size': 14,
     });
     
     line.node.id = 'line';
@@ -229,7 +231,7 @@ export default class PfamDomDraw {
             $.each(result.proteins, (i, prot) => {
               let length = parseInt(prot.protein_length);
               let scale = 1;
-              if(length/self.settings.scaleWidth >= 1.5) scale = 2;
+              if(length/self.settings._scaleWidth >= 1.5) scale = 2;
               if(domTypeIndex === 0) {
                 paper = self._create_paper(drawID, length, scale, gene, uniprot);
               }

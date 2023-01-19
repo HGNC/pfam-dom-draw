@@ -16,30 +16,16 @@ Simply add a `<div class='pfamDomDrawContainer'>` anywhere in your `<body>` and 
 ```html
 <div class="pfamDomDrawContainer" data-uniprot="Q9H0C5" data-gene="BTBD1"></div>
 ```
-Then at the bottom of the `<body>` add your javascript dependencies:
+
+Add the pfam-dom-draw.min.css style sheet to your HTML file within the head:
 ```html
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"
-></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"
-  integrity="sha512-j4t/Zu3RKgAxOcA1NyhbIcvo2N4xkhdmWGW48b4ir3fJ2FUifmgNF0qfknzYGkuQO/HQmwawwB0zBjKWizYWGw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
-<script src="js/bower_components/jquery.raphael.spinner/jquery.raphael.spinner.js"
-  type="text/javascript"
-></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"
-  integrity="sha512-BxJRFdTKV85fhFUw+olPr0B+UEzk8FTLxRB7dAdhoQ7SXmwMECj1I4BlSmZfeoSfy0OVA8xFLTDyObu3Nv1FoQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+<link href="node_modules/pfam-dom-draw/dist/css/pfam-dom-draw.min.css" rel="stylesheet"/>
 ```
+
 Finally call the `pfam_doms()` function beneth the script dependencies:
 ```html
 <script type="module">
-  import PfamDomDraw from './js/pfam-dom-draw/pfam-dom-draw.js';
+  import PfamDomDraw from 'pfam-dom-draw';
   $(document).ready(function(){
     let PDD = new PfamDomDraw({
       spinnerColor: '#999'

@@ -22,7 +22,7 @@ Add the pfam-dom-draw.min.css style sheet to your HTML file within the head:
 <link href="node_modules/pfam-dom-draw/dist/css/pfam-dom-draw.min.css" rel="stylesheet"/>
 ```
 
-Finally call the `pfam_doms()` function beneth the script dependencies:
+Finally call the `pfam_doms()` function at the bottom of your body section:
 ```html
 <script type="module">
   import PfamDomDraw from 'pfam-dom-draw';

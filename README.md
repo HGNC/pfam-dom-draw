@@ -6,50 +6,26 @@ Takes a HGNC approved symbol and a UniProt accession from the data-gene and data
 **For a live demo visit http://hgnc.github.io/pfam-dom-draw/**
 
 ## Install
-To install pfam-dom-draw the easiest way would be to install [bower](http://bower.io) as described in the bower documentation and then simply run the following in your js directory:
+To install pfam-dom-draw the easiest way would be to use npm:
 ```sh
-$ bower install git://github.com/HGNC/pfam-dom-draw.git
+$ npm install git+http://github.com/HGNC/pfam-dom-draw.git
 ```
-## Dependencies
-Javascript dependencies:
-- [jQuery ~3.6.3](https://code.jquery.com/jquery-3.6.3.min.js)
-- [Raphael ~2.1.0](https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js)
-- [jquery.raphael.spinner](https://github.com/HGNC/jquery.raphael.spinner)
-- [qTip2 3.0.3](https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js)
-
-Web service:
-- [InterPro REST API](https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs)
-- [HGNC wrapper for pfam REST](https://www.genenames.org/cgi-bin/protein/pfam-domains?up=P60709)
 
 ## Usage
 Simply add a `<div class='pfamDomDrawContainer'>` anywhere in your `<body>` and add the attributes `data-uniprot=""` and `data-gene=""`(optional) to the div tag with the UniProt accession within data-uniprot and a HGNC approved gene symbol within the data-gene. Multiple pfamDomDrawContainer divs can be added to the page:
 ```html
 <div class="pfamDomDrawContainer" data-uniprot="Q9H0C5" data-gene="BTBD1"></div>
 ```
-Then at the bottom of the `<body>` add your javascript dependencies:
+
+Add the pfam-dom-draw.min.css style sheet to your HTML file within the head:
 ```html
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"
-></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"
-  integrity="sha512-j4t/Zu3RKgAxOcA1NyhbIcvo2N4xkhdmWGW48b4ir3fJ2FUifmgNF0qfknzYGkuQO/HQmwawwB0zBjKWizYWGw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
-<script src="js/bower_components/jquery.raphael.spinner/jquery.raphael.spinner.js"
-  type="text/javascript"
-></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"
-  integrity="sha512-BxJRFdTKV85fhFUw+olPr0B+UEzk8FTLxRB7dAdhoQ7SXmwMECj1I4BlSmZfeoSfy0OVA8xFLTDyObu3Nv1FoQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
+<link href="node_modules/pfam-dom-draw/dist/css/pfam-dom-draw.min.css" rel="stylesheet"/>
 ```
-Finally call the `pfam_doms()` function beneth the script dependencies:
+
+Finally call the `pfam_doms()` function at the bottom of your body section:
 ```html
 <script type="module">
-  import PfamDomDraw from './js/pfam-dom-draw/pfam-dom-draw.js';
+  import PfamDomDraw from 'pfam-dom-draw';
   $(document).ready(function(){
     let PDD = new PfamDomDraw({
       spinnerColor: '#999'
@@ -108,6 +84,35 @@ The resulting graphic will show a stylised diagram of a protein with the pfam do
 
 ![successful result](https://user-images.githubusercontent.com/9589542/213166573-c16ffcee-6e1f-4e36-ad4c-16ee4b497824.png)
 
-##Acknowledgements
+## Development
+To develop this module change the code in src. The project uses [Vite](https://vitejs.dev/) to aid in development. Vite gives you the following commands to help.
+
+To see live saved changes run the following and view http://localhost:5173/
+```sh
+$ npm run dev
+```
+
+To build the distribution version
+```sh
+$ npm run build
+```
+
+To check the distribution version after a build
+```sh
+$ npm run preview
+```
+
+### Dependencies
+Javascript dependencies:
+- [jQuery ~3.6.3](https://code.jquery.com/jquery-3.6.3.min.js)
+- [Raphael ~2.1.0](https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js)
+- [jquery.raphael.spinner](https://github.com/HGNC/jquery.raphael.spinner)
+- [qTip2 3.0.3](https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js)
+
+Web service:
+- [InterPro REST API](https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs)
+- [HGNC wrapper for pfam REST](https://www.genenames.org/cgi-bin/protein/pfam-domains?up=P60709)
+
+## Acknowledgements
 Many thanks to the InterPro developers for providing a very useful REST webservice which this javascript code uses.
 Information about the InterPro REST API can be found at https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs.

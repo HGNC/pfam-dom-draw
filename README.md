@@ -116,3 +116,13 @@ Web service:
 ## Acknowledgements
 Many thanks to the InterPro developers for providing a very useful REST webservice which this javascript code uses.
 Information about the InterPro REST API can be found at https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs.
+
+## Cite us please
+Although the code is free and release with a permissive license with very little
+restrictions, we would appreciate it if you could reference us in some way, however
+this is not compulsary. The latest reference to our project can be found below.
+
+Seal RL, Braschi B, Gray K, Jones TEM, Tweedie S, Haim-Vilmovsky L, Bruford EA.
+**Genenames.org: the HGNC resources in 2023.** Nucleic Acids Res.
+PMID: [36243972](https://www.ncbi.nlm.nih.gov/pubmed/36243972)
+DOI: [10.1093/nar/gkac888](https://doi.org/10.1093/nar/gkac888">10.1093/nar/gkac888)

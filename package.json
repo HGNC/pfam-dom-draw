@@ -1,0 +1,40 @@
+{
+  "name": "pfam-dom-draw",
+  "version": "2.0.0",
+  "description": "Creates a diagram representing the UniProt protein with pfam domains mapped on to the protein",
+  "main": ["dist/js/pfam-dom-draw.min.js","dist/css/pfam-dom-draw.min.css"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HGNC/pfam-dom-draw.git"
+  },
+  "keywords": [
+    "UniProt",
+    "Pfam",
+    "HGNC",
+    "domains",
+    "protein",
+    "InterPro"
+  ],
+  "author": "KrisGray",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/HGNC/pfam-dom-draw/issues"
+  },
+  "homepage": "https://github.com/HGNC/pfam-dom-draw#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "jquery": "3.6.3",
+    "jquery.raphael.spinner": "git+https://github.com/hgnc/jquery.raphael.spinner",
+    "qTip2": "git+https://github.com/hgnc/qTip2",
+    "raphael": "git+https://github.com/KrisGray/raphael-2.3.0-esm"
+  },
+  "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.3",
+    "vite": "^4.0.0"
+  }
+}

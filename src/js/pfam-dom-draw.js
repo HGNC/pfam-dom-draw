@@ -1,7 +1,12 @@
+import arrowLeft from '../img/arrow-left.svg';
+import arrowRight from '../img/arrow-right.svg';
+import $ from 'jquery';
+import Raphael from 'raphael';
+import 'jquery.raphael.spinner';
+import 'qTip2';
 export default class PfamDomDraw {
   constructor (settings){
     this.settings = (typeof settings === 'undefined') ? {} : settings;
-    console.log(settings);
     this.settings.spinnerColor = this.settings.spinnerColor ? this.settings.spinnerColor : '#000';
     this.settings.width = this.settings.width ? this.settings.width : 768;
     this.settings._scaleWidth = this.settings.width + (this.settings.width/2);
@@ -47,7 +52,6 @@ export default class PfamDomDraw {
       '#708090'  //slategray
     ];
     this.numDistinctDoms = 0;
-    console.log(this.settings);
   }
 
   _getRGBComponents(color) {
@@ -251,7 +255,7 @@ export default class PfamDomDraw {
               } else {
                 $(`div#${drawID} svg`).addClass('scroll-protein');
                 if($(`div#${drawID}`).parent().find('.scroll-notice').length === 0){
-                  $(`div#${drawID}`).after('<div class="scroll-notice"><img src="bower_components/pfam-dom-draw/img/arrow-left.svg"> scroll <img src="bower_components/pfam-dom-draw/img/arrow-right.svg"></div>');
+                  $(`div#${drawID}`).after(`<div class="scroll-notice"><img src="${arrowLeft}"> scroll <img src="${arrowRight}"></div>`);
                 }
               }
               $(window).on('resize', self._waitForFinalEvent(() => {
@@ -262,7 +266,7 @@ export default class PfamDomDraw {
                 } else {
                   $(`div#${drawID} svg`).addClass('scroll-protein');
                   if($(`div#${drawID} + .scroll-notice`).length === 0){
-                    $(`div#${drawID}`).after('<div class="scroll-notice"><img src="bower_components/pfam-dom-draw/img/arrow-left.svg"> scroll <img src="bower_components/pfam-dom-draw/img/arrow-right.svg"></div>');
+                    $(`div#${drawID}`).after(`<div class="scroll-notice"><img src="${arrowLeft}"> scroll <img src="${arrowRight}"></div>`);
                   }
                 }
               }, 500, "some unique string"));

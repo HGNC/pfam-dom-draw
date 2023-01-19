@@ -1,7 +1,7 @@
 # pfam-dom-draw
 
 ## Introduction
-Takes a HGNC approved symbol and a UniProt accession from the data-gene and data-uniprot attributes within a div tag and creates a diagram representing the UniProt protein with pfam domains mapped on to the protein.
+Takes an HGNC approved symbol and a UniProt accession from the data-gene and data-uniprot attributes within a div tag and creates a diagram representing the UniProt protein with pfam domains mapped on to the protein.
 
 **For a live demo visit http://hgnc.github.io/pfam-dom-draw/**
 
@@ -12,7 +12,7 @@ $ npm install git+http://github.com/HGNC/pfam-dom-draw.git
 ```
 
 ## Usage
-Simply add a `<div class='pfamDomDrawContainer'>` anywhere in your `<body>` and add the attributes `data-uniprot=""` and `data-gene=""`(optional) to the div tag with the UniProt accession within data-uniprot and a HGNC approved gene symbol within the data-gene. Multiple pfamDomDrawContainer divs can be added to the page:
+Simply add a `<div class='pfamDomDrawContainer'>` anywhere in your `<body>` and add the attributes `data-uniprot=""` and `data-gene=""`(optional) to the div tag with the UniProt accession within data-uniprot and an HGNC approved gene symbol within the data-gene. Multiple pfamDomDrawContainer divs can be added to the page:
 ```html
 <div class="pfamDomDrawContainer" data-uniprot="Q9H0C5" data-gene="BTBD1"></div>
 ```
@@ -42,7 +42,7 @@ The constructor has one settings object that you can pass (spinnerColor, width a
   <dd>The max width of the viewable image. Default is 768 for 768px</dd>
   <dt>colors</dt>
   <dd>
-    An array/list of hexadecimal colors that domains could be colored. If there are more domains then colors then the colors are reused. The default colors can be seen in the table below.
+    An array/list of hexadecimal colors that domains could be colored. If there are more domains than colors, then the colors are reused. The default colors can be seen in the table below.
     <table>
       <tr><th>Hexadecimal code</th><th>Color name (not used in the array)</th></tr>
       <tr><td>#FF0000</td><td>Red</td></tr>
@@ -118,9 +118,9 @@ Many thanks to the InterPro developers for providing a very useful REST webservi
 Information about the InterPro REST API can be found at https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs.
 
 ## Cite us please
-Although the code is free and release with a permissive license with very little
-restrictions, we would appreciate it if you could reference us in some way, however
-this is not compulsary. The latest reference to our project can be found below.
+Although this code is free and released with a permissive license with very few
+restrictions, we would appreciate it if you would reference our project in some way.
+The latest reference to our project can be found below.
 
 Seal RL, Braschi B, Gray K, Jones TEM, Tweedie S, Haim-Vilmovsky L, Bruford EA.
 **Genenames.org: the HGNC resources in 2023.** Nucleic Acids Res.

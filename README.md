@@ -127,6 +127,6 @@ Web service:
 - [InterPro REST API](https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs)
 - [HGNC wrapper for pfam REST](https://www.genenames.org/cgi-bin/protein/pfam-domains?up=P60709)
 
-##Acknowledgements
+## Acknowledgements
 Many thanks to the InterPro developers for providing a very useful REST webservice which this javascript code uses.
 Information about the InterPro REST API can be found at https://github.com/ProteinsWebTeam/interpro7-api/tree/master/docs.

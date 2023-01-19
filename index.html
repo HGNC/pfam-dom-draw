@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://kit.fontawesome.com/bccd478a97.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Demo of pfam-dom-draw.js">
+    <meta name="author" content="KrisGray">
     <title>pfam-dom-draw demo</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.css"
-      rel="stylesheet"
-      integrity="sha512-+eoiXLTtw/fDauKv6qMjHuO5pCnqJLz83WWIEpCF+fCAoIkK4UNy04CtJbNZ73Oo/WeNom5FwKie4NVorKjomA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="css/main.css"
-      rel="stylesheet"
-    />
+    
+    
+    <style>
+      body {
+        background-color: azure;
+      }
+    </style>
+    <script type="module" crossorigin src="/js/pfam-dom-draw.min.js"></script>
+    <link rel="stylesheet" href="/css/pfam-dom-draw.min.css">
   </head>
   <body>
     <h1>Protein diagrams with pfam domains</h1>
@@ -42,31 +40,7 @@
     <h2>Large protein example</h2>
     <div class="pfamDomDrawContainer" data-gene="TTN" data-uniprot="Q8WZ42">
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"
-      integrity="sha512-j4t/Zu3RKgAxOcA1NyhbIcvo2N4xkhdmWGW48b4ir3fJ2FUifmgNF0qfknzYGkuQO/HQmwawwB0zBjKWizYWGw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/jquery.raphael.spinner/jquery.raphael.spinner.js"
-      type="text/javascript"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"
-      integrity="sha512-BxJRFdTKV85fhFUw+olPr0B+UEzk8FTLxRB7dAdhoQ7SXmwMECj1I4BlSmZfeoSfy0OVA8xFLTDyObu3Nv1FoQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script type="module">
-      import PfamDomDraw from './js/pfam-dom-draw/pfam-dom-draw.js';
-      $(document).ready(function(){
-        let PDD = new PfamDomDraw({
-          spinnerColor: '#999'
-        });
-        PDD.pfam_doms();
-      });
-    </script>
+    
+    
   </body>
 </html>
